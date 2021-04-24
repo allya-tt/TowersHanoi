@@ -1,15 +1,11 @@
 def towers(n, a, b, c):
     if n == 1:
-        print("Move ring ", n, ' from ', a, ' rod to ', b, ' rod.', sep='')
+        printing(a, b)
     else:
         towers(n-1, a, c, b)
         print("Move ring ", n, ' from ', a, ' rod to ', c, ' rod.', sep='')
         towers(n - 1, c, b, a)
     return ''
-
-
-def printing(a, b):
-    print("Move ring ", n, ' from ', a, ' rod to ', b, ' rod.', sep='')
 
 
 n = int(input('Enter the number of the rings: '))   # the number of rings
